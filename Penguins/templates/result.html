@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Quả Dự Đoán</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: white;
+        }
+        h1 {
+            color: #28a745;
+        }
+        .result-item {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            background-color: #e9f7ef;
+        }
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Kết Quả Dự Đoán</h1>
+        <p class="text-center">Các loài chim cánh cụt được dự đoán là:</p>
+        <div class="result-item">
+            <strong>PLA:</strong> {{ predictions['PLA'] }} - {{ predictions_named['PLA'] }}
+        </div>
+        <div class="result-item">
+            <strong>ID3:</strong> {{ predictions['ID3'] }} - {{ predictions_named['ID3'] }}
+        </div>
+        <div class="result-item">
+            <strong>MLP:</strong> {{ predictions['MLP'] }} - {{ predictions_named['MLP'] }}
+        </div>
+        <div class="result-item">
+            <strong>Bagging:</strong> {{ predictions['Bagging'] }} - {{ predictions_named['Bagging'] }}
+        </div>
+        <a href="/" class="btn btn-primary btn-block btn-back">Quay Lại</a>
+    </div>
+</body>
+</html>
